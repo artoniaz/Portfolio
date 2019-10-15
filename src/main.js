@@ -1,1 +1,1 @@
-console.log('bla');
+import { toggleButton } from './js/header';

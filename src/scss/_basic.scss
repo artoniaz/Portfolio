@@ -8,9 +8,15 @@ $main-color: #1C1C1BFF;
 $sec-color: #CE4A7EFF;
 $minor-color: white;
 
+button:focus{ outline: 0; }
+
 body {
     background-color: $main-color;
     font-size: 10px;
+}
+
+canvas {
+    overflow: hidden;
 }
 
 .mainContainer {

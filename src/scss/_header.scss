@@ -1,6 +1,7 @@
 .header {
   max-width: 100%;
   max-height: 100vh;
+  overflow: hidden;
   .hearder__background {
     @include background;
   }
@@ -29,10 +30,23 @@
     border: 5px solid $sec-color;
     font-weight: 700;
     cursor: pointer;
-    &:hover {
-        background-color: $main-color;
-        border-color: $main-color;
-        transition: 1s;
+  }
+  .header__button--noActive {
+    background-color: transparent;
+    border: 5px solid $sec-color;
+    transition: 1s;
+    i {
+        transform: rotate(0);
+        transition: 0.5s;
+    }
+  }
+  .header__button--active {
+    background-color: $main-color;
+    border-color: $main-color;
+    transition: 1s;
+    i {
+        transform: rotate(90deg);
+        transition: 0.5s;
     }
   }
 }

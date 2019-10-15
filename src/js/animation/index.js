@@ -10,15 +10,15 @@ function init() {
 
   root.renderer.setClearColor(0x000000, 0);
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
-  root.camera.position.set(0, 0, 35);
+  root.camera.position.set(0, 0, 60);
 
-  var width = 120;
-  var height = 60;
+  var width = 200;
+  var height = 100;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/office.jpg', function(img) {
+	l1.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/work.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
