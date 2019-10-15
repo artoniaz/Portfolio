@@ -18,7 +18,7 @@ function init() {
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/work.jpg', function(img) {
+	l1.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/artificial-intelligence.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
