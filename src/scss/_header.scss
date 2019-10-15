@@ -1,0 +1,38 @@
+.header {
+  max-width: 100%;
+  max-height: 100vh;
+  .hearder__background {
+    @include background;
+  }
+  .header__elements {
+    @include center;
+    .header__title {
+      font-size: 3rem;
+      .header__name {
+        color: $sec-color;
+      }
+    }
+    .header__subTitle {
+      font-size: 1.2rem;
+      text-align: right;
+      letter-spacing: 5px;
+    }
+  }
+  .header__button {
+    @include button;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $sec-color;
+    background-color: transparent;
+    border: 5px solid $sec-color;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-color;
+        border-color: $main-color;
+        transition: 1s;
+    }
+  }
+}

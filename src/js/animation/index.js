@@ -10,15 +10,15 @@ function init() {
 
   root.renderer.setClearColor(0x000000, 0);
   root.renderer.setPixelRatio(window.devicePixelRatio || 1);
-  root.camera.position.set(0, 0, 60);
+  root.camera.position.set(0, 0, 35);
 
-  var width = 160;
-  var height = 90;
+  var width = 120;
+  var height = 60;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('https://raw.githubusercontent.com/scriptonofficial/3D-Image-Transition-Project-Files/master/images/winter.jpg', function(img) {
+	l1.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/office.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
@@ -26,13 +26,13 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('https://raw.githubusercontent.com/artoniaz/Dragon-Ball-Game/master/img/buuPlayer.png', function(img) {
+	l2.load('https://raw.githubusercontent.com/artoniaz/Portfolio/master/src/imgs/robot.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
+  var tl = new TimelineMax({repeat:-1, repeatDelay:4.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
